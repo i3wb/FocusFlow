@@ -1,0 +1,145 @@
+:root {
+  --bg: #020617;
+  --card: rgba(255, 255, 255, 0.08);
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+body.light {
+  --card: rgba(0,0,0,0.06);
+  --text: #020617;
+  --muted: #475569;
+  background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--muted);
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 1px solid var(--muted);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.card h2 {
+  margin-bottom: 16px;
+}
+
+#task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  margin-bottom: 8px;
+}
+
+li.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.dragging {
+  opacity: 0.3;
+}
+
+.timer .time {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.analytics .stat {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+}
